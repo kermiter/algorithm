@@ -55,9 +55,10 @@ class Solution
             
         
         }
-        cout<<"max_len:"<<max_len<<endl;
-        (*this).res=s.substr(ibeg,max_len);
-        return s.substr(ibeg,max_len);    
+        if(ibeg==-1)
+            return s.substr(ibeg+1,1);
+        return s.substr(ibeg,max_len);
+        
     }
     void output() 
     {
@@ -70,9 +71,9 @@ class Solution
 
 int main()
 {   
-    string s="abacdfgdcaba";
+    string s="ab";
     Solution S0=Solution();
     string string0=S0.longestPalindrome(s);
-    S0.output();
+    cout<<string0<<endl;
     return 0;
 }
