@@ -9,7 +9,9 @@ using namespace std;
 class Solution{
     public:
         vector<vector<int>> permute(vector<int>& nums) {
-            vector<vector<int> >res;   
+            vector<vector<int> >res; 
+            //为啥需要排序,在有重复的元素的情况下,不排序结果有重复?
+            sort(nums.begin(),nums.end());
             permuteCore(nums,0,res);
             return res;
     }
@@ -45,7 +47,7 @@ class Solution{
 int main()
 {
     Solution res;
-    vector<int>ivec({1,2,3});
+    vector<int>ivec({3,3,0,3});
     vector<vector<int> >ans=res.permute(ivec);
     for(int i=0; i<ans.size();i++)
     {
