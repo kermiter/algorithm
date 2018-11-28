@@ -5,3 +5,4 @@ oderecord:
 46
 60.
 516 Longest Palindromic Subsequence
+127
