@@ -36,7 +36,6 @@ void FindSubstr(char*str)
             }
             memset(strMap,0,256);
             memset(tmp,0,256);
-            p=p-
             
         }
         
