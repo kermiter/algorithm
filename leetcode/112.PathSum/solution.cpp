@@ -20,7 +20,23 @@ struct TreeNode {
 }; 
 class Solution{
     public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        
+        if(root&&root->left==NULL&&root->right==NULL&&sum-root->val==0) return true;
+        if(root==NULL&&sum!=0)return false;
+        
+        bool bleft=false;
+        if(root)
+        {
+            bleft=hasPathSum(root->left,sum-root->val);
+            if(!bleft)
+            bleft=hasPathSum(root->right,sum-root->val);
+        }
 
+        return bleft;
+        
+
+    }
 };
 int main()
 {
