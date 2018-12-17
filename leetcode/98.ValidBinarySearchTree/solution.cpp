@@ -34,7 +34,7 @@ class Solution{
        }
 
        /*
-        * 二叉搜索树中序遍历即为降序，按照这个思路写
+        * 二叉搜索树中序遍历即为升序，按照这个思路写
         *bool isValidBST(TreeNode* root) {
         TreeNode* prev = NULL;
         return validate(root, prev);

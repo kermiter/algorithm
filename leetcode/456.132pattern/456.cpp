@@ -28,10 +28,12 @@ class Solution{
         {
             if(nums[i]<nums[i-1])
             {
-                if(s<i-1)
+                if(s<i-1&&nums[i]>nums[s])
                 {
-                    vector<int>tmp({nums[s],nums[i-1]});
-                    intervals.push_back(tmp);             
+                    //vector<int>tmp({nums[s],nums[i-1]});
+                    //intervals.push_back(tmp);
+                    cout<<"find!";
+                    return true;
                 }
                 s=i;
             }

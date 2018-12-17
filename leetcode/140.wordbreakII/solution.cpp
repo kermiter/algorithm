@@ -71,6 +71,7 @@ int main()
     Solution res;
     vector<string>ans;
     ans=res.wordBreak(s,vsvc);
-    for(auto st: ans)
-        cout<<st<<endl;
+    //for(auto st: ans)
+     //   cout<<st<<endl;
+    cout<<"s:  "<<s<<"s.substr:"<<s.substr(1)<<endl;
 }

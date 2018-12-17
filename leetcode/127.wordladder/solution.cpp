@@ -24,7 +24,6 @@ class Solution{
             
             int num=0;
             string word;
-            unordered_map<string,string>fmap;
             fmap[beginWord]=beginWord;
             vector<vector<string> >svec;
             while(!tovisit.empty()){
@@ -35,15 +34,7 @@ class Solution{
                     tovisit.pop();
                     if(word==endWord) 
                     {  
-                        vector<string>vec;
-                        while(fmap[word]!=word)
-                        {
-                            vec.push_back(word);
-                            word=fmap[word];
-                            cout<<word<<",";
-                        }
                         vec.push_back(word);
-                        cout<<word<<endl;
                         svec.push_back(vec);
                         if(dist<min_dist)
                             min_dist=dist;
